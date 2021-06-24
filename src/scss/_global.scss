@@ -1,0 +1,28 @@
+@import 'variables';
+
+* {
+  box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+  outline: none;
+}
+
+html {
+  font-family: $global-font-family;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: $global-font-size;
+}
+
+html,
+body,
+my-app {
+  width: 100vw;
+  height: 100vh;
+  margin: 0rem;
+  padding: 0rem;
+}
