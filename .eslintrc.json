@@ -161,8 +161,11 @@
         "*.html"
       ],
       "extends": [
-        "plugin:@angular-eslint/template/recommended"
-      ]
+        "plugin:@angular-eslint/template/all"
+      ],
+      "rules": {
+        "@angular-eslint/template/i18n": "off"
+      }
     }
   ]
 }
