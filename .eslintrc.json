@@ -73,6 +73,7 @@
             "readonly": "generic"
           }
         ],
+        "@typescript-eslint/consistent-type-imports": "off",
         "@typescript-eslint/indent": [
           "error",
           2
@@ -136,21 +137,20 @@
           }
         ],
         "@typescript-eslint/strict-boolean-expressions": "off",
-        "@typescript-eslint/consistent-type-imports": "off",
-        "@angular-eslint/directive-selector": [
-          "error",
-          {
-            "type": "attribute",
-            "prefix": "my",
-            "style": "camelCase"
-          }
-        ],
         "@angular-eslint/component-selector": [
           "error",
           {
             "type": "element",
             "prefix": "my",
             "style": "kebab-case"
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "my",
+            "style": "camelCase"
           }
         ],
         "@angular-eslint/prefer-on-push-component-change-detection": "off"
