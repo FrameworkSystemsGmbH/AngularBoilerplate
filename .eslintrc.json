@@ -28,6 +28,9 @@
         "camelcase": "off",
         "capitalized-comments": "off",
         "class-methods-use-this": "off",
+        "complexity": "off",
+        "default-case": "off",
+        "dot-location": "off",
         "eqeqeq": "off",
         "func-names": "off",
         "func-style": "off",
@@ -39,16 +42,20 @@
           "error",
           "windows"
         ],
-        "max-classes-per-file": "off",
+        "max-depth": "off",
         "max-len": "off",
         "max-lines": "off",
         "max-lines-per-function": "off",
         "max-params": "off",
         "max-statements": "off",
+        "max-statements-per-line": "off",
         "multiline-ternary": "off",
         "new-cap": "off",
         "newline-per-chained-call": "off",
+        "no-bitwise": "off",
+        "no-case-declarations": "off",
         "no-console": "off",
+        "no-continue": "off",
         "no-else-return": "off",
         "no-eq-null": "off",
         "no-extend-native": "off",
@@ -63,6 +70,7 @@
         "operator-linebreak": "off",
         "padded-blocks": "off",
         "prefer-destructuring": "off",
+        "prefer-named-capture-group": "off",
         "quote-props": "off",
         "sort-imports": "off",
         "sort-keys": "off",
@@ -74,6 +82,7 @@
           }
         ],
         "@typescript-eslint/consistent-type-imports": "off",
+        "@typescript-eslint/dot-notation": "off",
         "@typescript-eslint/indent": [
           "error",
           2
@@ -115,11 +124,19 @@
         ],
         "@typescript-eslint/naming-convention": "off",
         "@typescript-eslint/no-confusing-void-expression": "off",
-        "@typescript-eslint/no-extraneous-class": "off",
         "@typescript-eslint/no-inferrable-types": "off",
         "@typescript-eslint/no-magic-numbers": "off",
+        "@typescript-eslint/no-unused-vars": [
+          "error",
+          {
+            "args": "none"
+          }
+        ],
+        "@typescript-eslint/non-nullable-type-assertion-style": "off",
+        "@typescript-eslint/prefer-literal-enum-member": "off",
         "@typescript-eslint/prefer-optional-chain": "off",
         "@typescript-eslint/prefer-readonly-parameter-types": "off",
+        "@typescript-eslint/prefer-regexp-exec": "off",
         "@typescript-eslint/quotes": [
           "error",
           "single"
@@ -152,8 +169,7 @@
             "prefix": "my",
             "style": "camelCase"
           }
-        ],
-        "@angular-eslint/prefer-on-push-component-change-detection": "off"
+        ]
       }
     },
     {
@@ -164,6 +180,9 @@
         "plugin:@angular-eslint/template/all"
       ],
       "rules": {
+        "@angular-eslint/template/click-events-have-key-events": "off",
+        "@angular-eslint/template/cyclomatic-complexity": "off",
+        "@angular-eslint/template/eqeqeq": "off",
         "@angular-eslint/template/i18n": "off"
       }
     }
