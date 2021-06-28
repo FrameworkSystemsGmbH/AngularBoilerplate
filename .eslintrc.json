@@ -79,7 +79,6 @@
     },
     {
       "files": [
-        "*.js",
         "*.ts"
       ],
       "parserOptions": {
