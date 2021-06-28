@@ -16,10 +16,7 @@
         "createDefaultProgram": true
       },
       "extends": [
-        "eslint:all",
-        "plugin:@typescript-eslint/all",
-        "plugin:@angular-eslint/all",
-        "plugin:@angular-eslint/template/process-inline-templates"
+        "eslint:all"
       ],
       "rules": {
         "array-bracket-newline": "off",
@@ -37,6 +34,10 @@
         "function-call-argument-newline": "off",
         "function-paren-newline": "off",
         "id-length": "off",
+        "indent": [
+          "error",
+          2
+        ],
         "line-comment-position": "off",
         "linebreak-style": [
           "error",
@@ -73,7 +74,26 @@
         "prefer-named-capture-group": "off",
         "quote-props": "off",
         "sort-imports": "off",
-        "sort-keys": "off",
+        "sort-keys": "off"
+      }
+    },
+    {
+      "files": [
+        "*.js",
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "plugin:@typescript-eslint/all",
+        "plugin:@angular-eslint/all",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
         "@typescript-eslint/array-type": [
           "error",
           {
