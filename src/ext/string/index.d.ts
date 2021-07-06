@@ -2,8 +2,6 @@ interface StringConstructor {
 
   empty: () => string;
 
-  isNullOrWhiteSpace: (str: string | undefined) => boolean;
-
   equals: (x: string, y: string, ignoreCase: boolean) => boolean;
 
   replaceAll: (str: string, search: string, replacement: string) => string;

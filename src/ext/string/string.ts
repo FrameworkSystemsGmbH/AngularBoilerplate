@@ -2,10 +2,6 @@ String.empty = function (): string {
   return '';
 };
 
-String.isNullOrWhiteSpace = function (str: string | undefined): boolean {
-  return str == null || str.trim() === String.empty();
-};
-
 String.equals = function (x: string, y: string, ignoreCase: boolean): boolean {
   if (x && y) {
     if (ignoreCase) {
