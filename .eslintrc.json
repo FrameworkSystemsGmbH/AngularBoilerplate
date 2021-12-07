@@ -175,6 +175,7 @@
           }
         ],
         "@typescript-eslint/strict-boolean-expressions": "off",
+        "@angular-eslint/component-max-inline-declarations": "off",
         "@angular-eslint/component-selector": [
           "error",
           {
@@ -190,7 +191,8 @@
             "prefix": "my",
             "style": "camelCase"
           }
-        ]
+        ],
+        "@angular-eslint/prefer-on-push-component-change-detection": "off"
       }
     },
     {
@@ -204,7 +206,8 @@
         "@angular-eslint/template/click-events-have-key-events": "off",
         "@angular-eslint/template/cyclomatic-complexity": "off",
         "@angular-eslint/template/eqeqeq": "off",
-        "@angular-eslint/template/i18n": "off"
+        "@angular-eslint/template/i18n": "off",
+        "@angular-eslint/template/use-track-by-function": "off"
       }
     }
   ]
