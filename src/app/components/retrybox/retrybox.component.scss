@@ -1,0 +1,82 @@
+:host {
+  display: flex;
+  flex-direction: column;
+
+  .retrybox-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 1.4rem;
+
+    .retrybox-header {
+      flex: 0 0 auto;
+      display: flex;
+      margin-bottom: 1.4rem;
+
+      .retrybox-header-title {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+
+        span {
+          font-size: 2rem;
+          font-weight: bold;
+        }
+      }
+
+      .retrybox-header-icon {
+        flex: 0 0 auto;
+        margin-left: 0.5rem;
+        color: red;
+      }
+    }
+
+    .retrybox-message {
+      flex: 1 1 auto;
+      display: flex;
+      overflow: auto;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+
+      span {
+        user-select: text;
+        white-space: pre-wrap;
+      }
+    }
+
+    .retrybox-stacktrace {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border: 0.1rem solid lightgrey;
+      border-radius: 0.5rem;
+
+      .retrybox-stacktrace-scroller {
+        padding: 0.5rem;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+
+        span {
+          user-select: text;
+          white-space: pre;
+        }
+      }
+    }
+
+    .retrybox-footer {
+      flex: 0 0 auto;
+      display: flex;
+      margin-top: 1.4rem;
+      justify-content: center;
+
+      button {
+        padding: 0rem 1rem !important;
+      }
+
+      button:not(:last-child) {
+        margin-right: 1.4rem;
+      }
+    }
+  }
+}

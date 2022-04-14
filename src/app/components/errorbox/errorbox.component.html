@@ -1,0 +1,22 @@
+<div class="errorbox-wrapper" hcDialogResize>
+  <div class="errorbox-header">
+    <div class="errorbox-header-title">
+      <span>{{ title }}</span>
+    </div>
+    <div class="errorbox-header-icon">
+      <fa-icon [icon]="iconExclamation" size="2x"></fa-icon>
+    </div>
+  </div>
+  <div class="errorbox-message" *ngIf="!showStackTrace">
+    <span>{{ message }}</span>
+  </div>
+  <div class="errorbox-stacktrace" *ngIf="showStackTrace && stackTrace">
+    <div class="errorbox-stacktrace-scroller">
+      <span>{{ stackTrace }}</span>
+    </div>
+  </div>
+  <div class="errorbox-footer" cdkTrapFocus>
+    <button mat-raised-button (click)="onDetailsClick()" *ngIf="stackTrace">{{ showStackTrace ? 'Hide Details' : 'Show Details'}}</button>
+    <button mat-raised-button (click)="onOkClick()">Ok</button>
+  </div>
+</div>

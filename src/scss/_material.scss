@@ -1,0 +1,36 @@
+.cdk-overlay-backdrop.cdk-overlay-backdrop-showing.backdrop {
+  background: black !important;
+  opacity: 0.8 !important;
+}
+
+.mat-button,
+.mat-fab,
+.mat-icon-button,
+.mat-mini-fab,
+.mat-raised-button {
+  min-width: 7rem !important;
+  padding: 0 !important;
+
+  &[disabled] {
+    cursor: no-drop !important;
+  }
+}
+
+.mat-card {
+  padding: 1.5rem !important;
+}
+
+.cdk-overlay-container {
+  z-index: 90 !important;
+}
+
+.cdk-overlay-pane {
+  max-width: 100% !important;
+}
+
+.mat-dialog-container {
+  overflow: hidden !important;
+  padding: 0 !important;
+  border-radius: 0.5rem !important;
+  box-shadow: 0.3rem 0.3rem 1rem black !important;
+}
