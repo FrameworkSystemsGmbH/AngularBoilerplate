@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule, NgZone, Provider } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserModule } from '@angular/platform-browser';
@@ -6,8 +6,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ErrorBoxComponent } from '@app/components/errorbox/errorbox.component';
 import { MsgBoxComponent } from '@app/components/msgbox/msgbox.component';
 import { RetryBoxComponent } from '@app/components/retrybox/retrybox.component';
+import { DialogService } from '@app/services/dialog.service';
+import { ErrorService } from '@app/services/error.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppComponent } from './app.component';
+
+const errorProvider: Provider = {
+  provide: ErrorHandler,
+  useFactory: (zone: NgZone, dialogService: DialogService): ErrorService => new ErrorService(zone, dialogService),
+  deps: [
+    NgZone,
+    DialogService
+  ]
+};
 
 @NgModule({
   declarations: [
@@ -23,7 +34,9 @@ import { AppComponent } from './app.component';
     MatButtonModule,
     MatDialogModule
   ],
-  providers: [],
+  providers: [
+    errorProvider
+  ],
   bootstrap: [AppComponent]
 })
 // eslint-disable-next-line @typescript-eslint/no-extraneous-class

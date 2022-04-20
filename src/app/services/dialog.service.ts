@@ -3,11 +3,11 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { IErrorBoxData } from '@app/components/errorbox/errorbox-data.interface';
 import { ErrorBoxComponent } from '@app/components/errorbox/errorbox.component';
 import { IMsgBoxData } from '@app/components/msgbox/msgbox-data.interface';
+import { MsgBoxResult } from '@app/components/msgbox/msgbox-result';
 import { MsgBoxComponent } from '@app/components/msgbox/msgbox.component';
 import { IRetryBoxData } from '@app/components/retrybox/retrybox-data.interface';
-import { RetryBoxComponent } from '@app/components/retrybox/retrybox.component';
-import { MsgBoxResult } from '@app/components/msgbox/msgbox-result';
 import { RetryBoxResult } from '@app/components/retrybox/retrybox-result';
+import { RetryBoxComponent } from '@app/components/retrybox/retrybox.component';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -18,6 +18,14 @@ export class DialogService {
 
   public constructor(dialog: MatDialog) {
     this._dialog = dialog;
+  }
+
+  public showErrorBoxForError(error: Error): Observable<void> {
+    return this.showErrorBox({
+      title: error.name,
+      message: error.message,
+      stackTrace: error.stack
+    });
   }
 
   public showErrorBox(data: IErrorBoxData): Observable<void> {
