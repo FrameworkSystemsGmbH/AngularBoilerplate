@@ -4,8 +4,9 @@ export class NonError extends Error {
   public constructor(input: unknown) {
     super(inspect(input));
 
-    this.name = 'NonError';
+    const err: Error = new Error();
 
-    Error.captureStackTrace(this, NonError);
+    this.name = 'NonError';
+    this.stack = err.stack;
   }
 }
