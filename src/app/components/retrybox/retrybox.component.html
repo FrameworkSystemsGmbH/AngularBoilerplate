@@ -16,8 +16,8 @@
     </div>
   </div>
   <div #footer class="retrybox-footer" tabindex="-1" cdkTrapFocus>
-    <button mat-raised-button (click)="onDetailsClick()" *ngIf="stackTrace">{{ showStackTrace ? 'Hide Details' : 'Show Details' }}</button>
-    <button mat-raised-button (click)="onAbortClick()">Abort</button>
-    <button mat-raised-button (click)="onRetryClick()">Retry</button>
+    <button type="button" mat-raised-button (click)="onDetailsClick()" *ngIf="stackTrace">{{ showStackTrace ? 'Hide Details' : 'Show Details' }}</button>
+    <button type="button" mat-raised-button (click)="onAbortClick()">Abort</button>
+    <button type="button" mat-raised-button (click)="onRetryClick()">Retry</button>
   </div>
 </div>
