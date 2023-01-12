@@ -6,8 +6,8 @@
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
-    "module": "es2020",
-    "moduleResolution": "node",
+    "module": "ES2022",
+    "moduleResolution": "Node",
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "removeComments": true,
@@ -17,10 +17,11 @@
     "strictFunctionTypes": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
-    "target": "es2020",
+    "target": "ES2022",
+    "useDefineForClassFields": false,
     "lib": [
-      "es2020",
-      "dom"
+      "ES2022",
+      "DOM"
     ],
     "paths": {
       "@app/*": [

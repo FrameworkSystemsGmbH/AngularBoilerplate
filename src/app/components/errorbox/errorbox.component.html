@@ -4,19 +4,19 @@
       <span>{{ title }}</span>
     </div>
     <div class="errorbox-header-icon">
-      <fa-icon [icon]="iconExclamation" size="2x"></fa-icon>
+      <fa-icon size="2x" [icon]="iconExclamation"></fa-icon>
     </div>
   </div>
-  <div class="errorbox-message" *ngIf="!showStackTrace">
+  <div *ngIf="!showStackTrace" class="errorbox-message">
     <span>{{ message }}</span>
   </div>
-  <div class="errorbox-stacktrace" *ngIf="showStackTrace && stackTrace">
+  <div *ngIf="showStackTrace && stackTrace" class="errorbox-stacktrace">
     <div class="errorbox-stacktrace-scroller">
       <span>{{ stackTrace }}</span>
     </div>
   </div>
   <div class="errorbox-footer" cdkTrapFocus>
-    <button type="button" mat-raised-button (click)="onDetailsClick()" *ngIf="stackTrace">{{ showStackTrace ? 'Hide Details' : 'Show Details'}}</button>
+    <button *ngIf="stackTrace" type="button" mat-raised-button (click)="onDetailsClick()">{{ showStackTrace ? 'Hide Details' : 'Show Details'}}</button>
     <button type="button" mat-raised-button (click)="onOkClick()">Ok</button>
   </div>
 </div>

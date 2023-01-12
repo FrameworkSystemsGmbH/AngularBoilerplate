@@ -24,10 +24,6 @@ String.replaceAll = function (str: string, search: string, replacement: string):
   return str.split(search).join(replacement);
 };
 
-String.prototype.replaceAll = function (search: string, replacement: string): string {
-  return String.replaceAll(this.toString(), search, replacement);
-};
-
 String.trimCharsLeft = function (str: string, chars: string): string {
   return str.replace(new RegExp(`^[${chars}]+`, 'u'), '');
 };

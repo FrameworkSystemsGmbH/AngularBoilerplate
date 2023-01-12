@@ -49,22 +49,6 @@ export class MsgBoxComponent implements AfterViewInit {
     }
   }
 
-  private onBackButton(): boolean {
-    if (this.buttons === MsgBoxButtons.AbortRetryIgnore) {
-      this._dialogRef.close(MsgBoxResult.Abort);
-    } else if (this.buttons === MsgBoxButtons.Ok) {
-      this._dialogRef.close(MsgBoxResult.Ok);
-    } else if (this.buttons === MsgBoxButtons.OkCancel) {
-      this._dialogRef.close(MsgBoxResult.Cancel);
-    } else if (this.buttons === MsgBoxButtons.RetryCancel) {
-      this._dialogRef.close(MsgBoxResult.Cancel);
-    } else if (this.buttons === MsgBoxButtons.YesNoCancel) {
-      this._dialogRef.close(MsgBoxResult.Cancel);
-    }
-
-    return true;
-  }
-
   public onYesClick(): void {
     this._dialogRef.close(MsgBoxResult.Yes);
   }
