@@ -7,7 +7,6 @@
   "license": "none",
   "readme": "README.md",
   "scripts": {
-    "ng": "ng",
     "lint": "ng lint",
     "test": "ng test",
     "buildDev": "ng build -c dev",
@@ -29,7 +28,7 @@
     "@fortawesome/fontawesome-svg-core": "6.2.1",
     "@fortawesome/free-solid-svg-icons": "6.2.1",
     "normalize.css": "8.0.1",
-    "object-inspect": "1.12.2",
+    "object-inspect": "1.12.3",
     "rxjs": "7.8.0",
     "tslib": "2.4.1",
     "zone.js": "0.12.0"
@@ -55,7 +54,6 @@
     "karma-coverage": "2.2.0",
     "karma-jasmine": "5.1.0",
     "karma-jasmine-html-reporter": "2.0.0",
-    "npx": "10.2.2",
     "typescript": "4.9.4"
   }
 }
