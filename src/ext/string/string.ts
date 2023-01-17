@@ -20,10 +20,6 @@ String.prototype.equals = function (other: string, ignoreCase: boolean): boolean
   return String.equals(this.toString(), other, ignoreCase);
 };
 
-String.replaceAll = function (str: string, search: string, replacement: string): string {
-  return str.split(search).join(replacement);
-};
-
 String.trimCharsLeft = function (str: string, chars: string): string {
   return str.replace(new RegExp(`^[${chars}]+`, 'u'), '');
 };

@@ -1,12 +1,31 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+
 import * as inspect from 'object-inspect';
 
 export class NonError extends Error {
   public constructor(input: unknown) {
     super(inspect(input));
 
-    const err: Error = new Error();
+    this.name = 'Non-Error';
+    this.stack = `${this.name}: ${this.message}\n${this.captureStackTrace()}`;
+  }
 
-    this.name = 'NonError';
-    this.stack = err.stack;
+  private captureStackTrace(): string {
+    const stack: string | undefined = new Error().stack;
+
+    if (stack == null) {
+      return '<stack missing>';
+    }
+
+    const stackLines: Array<string> = stack.split('\n');
+
+    if (stackLines.length <= 4) {
+      return '<stack missing>';
+    }
+
+    stackLines.splice(0, 4);
+
+    return stackLines.join('\n');
   }
 }

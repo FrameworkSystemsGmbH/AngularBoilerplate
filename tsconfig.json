@@ -26,9 +26,6 @@
     "paths": {
       "@app/*": [
         "src/app/*"
-      ],
-      "@env/*": [
-        "src/env/*"
       ]
     }
   },
