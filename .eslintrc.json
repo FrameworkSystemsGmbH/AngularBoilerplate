@@ -1,8 +1,5 @@
 {
   "root": true,
-  "ignorePatterns": [
-    "karma.conf.js"
-  ],
   "overrides": [
     {
       "files": [
