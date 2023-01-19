@@ -1,10 +1,8 @@
 // Normalize
 @import '~normalize.css/normalize.css';
 
-// Angulat Material
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
-
 // Custom
 @import 'scss/global';
 @import 'scss/controls';
+@import 'scss/theme';
 @import 'scss/material';
