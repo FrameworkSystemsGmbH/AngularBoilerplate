@@ -17,7 +17,7 @@ export class ErrorService extends ErrorHandler {
     this._dialogService = dialogService;
   }
 
-  public handleError(error: unknown): void {
+  public override handleError(error: unknown): void {
     this._zone.run(() => {
       this._dialogService.showErrorBoxForError(Error.ensureError(error));
     });
