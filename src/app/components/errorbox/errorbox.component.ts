@@ -1,12 +1,21 @@
+import { CommonModule } from '@angular/common';
 import { Component, Inject } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { IErrorBoxData } from '@app/components/errorbox/errorbox-data.interface';
-import { faExclamationCircle, IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { IconDefinition, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
+  standalone: true,
   selector: 'my-errorbox',
   templateUrl: './errorbox.component.html',
-  styleUrls: ['./errorbox.component.scss']
+  styleUrls: ['./errorbox.component.scss'],
+  imports: [
+    CommonModule,
+    FontAwesomeModule,
+    MatButtonModule
+  ]
 })
 export class ErrorBoxComponent {
 

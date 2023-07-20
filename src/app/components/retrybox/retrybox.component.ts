@@ -1,13 +1,22 @@
+import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, Inject, ViewChild } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { IRetryBoxData } from '@app/components/retrybox/retrybox-data.interface';
 import { RetryBoxResult } from '@app/components/retrybox/retrybox-result';
-import { faExclamationCircle, IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { IconDefinition, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
+  standalone: true,
   selector: 'my-retrybox',
   templateUrl: './retrybox.component.html',
-  styleUrls: ['./retrybox.component.scss']
+  styleUrls: ['./retrybox.component.scss'],
+  imports: [
+    CommonModule,
+    FontAwesomeModule,
+    MatButtonModule
+  ]
 })
 export class RetryBoxComponent implements AfterViewInit {
 

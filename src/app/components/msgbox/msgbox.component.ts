@@ -1,15 +1,24 @@
+import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, Inject, ViewChild } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { MsgBoxButtons } from '@app/components/msgbox/msgbox-buttons';
 import { IMsgBoxData } from '@app/components/msgbox/msgbox-data.interface';
 import { MsgBoxIcon } from '@app/components/msgbox/msgbox-icon';
 import { MsgBoxResult } from '@app/components/msgbox/msgbox-result';
-import { faExclamationCircle, faExclamationTriangle, faInfoCircle, faQuestionCircle, IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { IconDefinition, faExclamationCircle, faExclamationTriangle, faInfoCircle, faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
+  standalone: true,
   selector: 'my-msgbox',
   templateUrl: './msgbox.component.html',
-  styleUrls: ['./msgbox.component.scss']
+  styleUrls: ['./msgbox.component.scss'],
+  imports: [
+    CommonModule,
+    FontAwesomeModule,
+    MatButtonModule
+  ]
 })
 export class MsgBoxComponent implements AfterViewInit {
 
