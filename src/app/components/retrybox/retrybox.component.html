@@ -7,16 +7,22 @@
       <fa-icon size="2x" [icon]="iconExclamation" />
     </div>
   </div>
-  <div *ngIf="!showStackTrace" class="retrybox-message">
+  @if (!showStackTrace) {
+  <div class="retrybox-message">
     <span>{{ message }}</span>
   </div>
-  <div *ngIf="showStackTrace && stackTrace" class="retrybox-stacktrace">
+  }
+  @if (showStackTrace && stackTrace) {
+  <div class="retrybox-stacktrace">
     <div class="retrybox-stacktrace-scroller">
       <span>{{ stackTrace }}</span>
     </div>
   </div>
+  }
   <div #footer class="retrybox-footer" tabindex="-1" cdkTrapFocus>
-    <button *ngIf="stackTrace" type="button" mat-raised-button (click)="onDetailsClick()">{{ showStackTrace ? 'Hide Details' : 'Show Details' }}</button>
+    @if (stackTrace) {
+    <button type="button" mat-raised-button (click)="onDetailsClick()">{{ showStackTrace ? 'Hide Details' : 'Show Details' }}</button>
+    }
     <button type="button" mat-raised-button (click)="onAbortClick()">Abort</button>
     <button type="button" mat-raised-button (click)="onRetryClick()">Retry</button>
   </div>
