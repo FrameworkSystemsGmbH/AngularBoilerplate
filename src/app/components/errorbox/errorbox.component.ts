@@ -10,7 +10,7 @@ import { IconDefinition, faExclamationCircle } from '@fortawesome/free-solid-svg
   standalone: true,
   selector: 'my-errorbox',
   templateUrl: './errorbox.component.html',
-  styleUrls: ['./errorbox.component.scss'],
+  styleUrl: './errorbox.component.scss',
   imports: [
     CommonModule,
     FontAwesomeModule,

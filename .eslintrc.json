@@ -102,10 +102,6 @@
         "@typescript-eslint/class-methods-use-this": "off",
         "@typescript-eslint/consistent-type-imports": "off",
         "@typescript-eslint/dot-notation": "off",
-        "@typescript-eslint/indent": [
-          "error",
-          2
-        ],
         "@typescript-eslint/init-declarations": "off",
         "@typescript-eslint/lines-between-class-members": "off",
         "@typescript-eslint/member-ordering": [
@@ -164,22 +160,6 @@
         "@typescript-eslint/prefer-optional-chain": "off",
         "@typescript-eslint/prefer-readonly-parameter-types": "off",
         "@typescript-eslint/prefer-regexp-exec": "off",
-        "@typescript-eslint/quotes": [
-          "error",
-          "single"
-        ],
-        "@typescript-eslint/object-curly-spacing": [
-          "error",
-          "always"
-        ],
-        "@typescript-eslint/space-before-function-paren": [
-          "error",
-          {
-            "anonymous": "always",
-            "named": "never",
-            "asyncArrow": "always"
-          }
-        ],
         "@typescript-eslint/strict-boolean-expressions": "off",
         "@angular-eslint/component-max-inline-declarations": "off",
         "@angular-eslint/component-selector": [
@@ -215,7 +195,8 @@
         "@angular-eslint/template/eqeqeq": "off",
         "@angular-eslint/template/i18n": "off",
         "@angular-eslint/template/interactive-supports-focus": "off",
-        "@angular-eslint/template/use-track-by-function": "off"
+        "@angular-eslint/template/use-track-by-function": "off",
+        "@angular-eslint/template/prefer-self-closing-tags": 0
       }
     }
   ]

@@ -11,7 +11,7 @@ import { IconDefinition, faExclamationCircle } from '@fortawesome/free-solid-svg
   standalone: true,
   selector: 'my-retrybox',
   templateUrl: './retrybox.component.html',
-  styleUrls: ['./retrybox.component.scss'],
+  styleUrl: './retrybox.component.scss',
   imports: [
     CommonModule,
     FontAwesomeModule,

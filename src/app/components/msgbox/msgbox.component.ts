@@ -13,7 +13,7 @@ import { IconDefinition, faExclamationCircle, faExclamationTriangle, faInfoCircl
   standalone: true,
   selector: 'my-msgbox',
   templateUrl: './msgbox.component.html',
-  styleUrls: ['./msgbox.component.scss'],
+  styleUrl: './msgbox.component.scss',
   imports: [
     CommonModule,
     FontAwesomeModule,

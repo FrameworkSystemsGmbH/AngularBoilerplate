@@ -2,4 +2,4 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from '@app/app.component';
 import { APP_PROVIDERS } from '@app/app.providers';
 
-bootstrapApplication(AppComponent, { providers: APP_PROVIDERS }).catch(err => console.log(err));
+bootstrapApplication(AppComponent, { providers: APP_PROVIDERS }).catch((err: unknown) => console.log(err));
