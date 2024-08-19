@@ -11,8 +11,8 @@ export default tseslint.config(
       // Apply the recommended core rules
       eslint.configs.all,
       // Apply the recommended TypeScript rules
-      ...tseslint.configs.recommendedTypeChecked,
-      ...tseslint.configs.strict, // new - add maybe TypeChecked
+      ...tseslint.configs.recommended,
+      ...tseslint.configs.strict,
       // Optionally apply stylistic rules from typescript-eslint that improve code consistency
       ...tseslint.configs.stylistic,
       // Apply the recommended Angular rules
@@ -20,8 +20,8 @@ export default tseslint.config(
     ],
     languageOptions: {
       parserOptions: {
-        projectService: true,
-        createDefaultProgram: true,
+        project: true,
+        tsconfigRootDir: import.meta.dirname,
       },
     },
     // Set the custom processor which will allow us to have our inline Component templates extracted
