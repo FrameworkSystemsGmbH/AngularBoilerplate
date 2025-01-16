@@ -8,15 +8,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  standalone: true,
-  selector: 'my-retrybox',
-  templateUrl: './retrybox.component.html',
-  styleUrl: './retrybox.component.scss',
-  imports: [
-    CommonModule,
-    FontAwesomeModule,
-    MatButtonModule
-  ]
+    selector: 'my-retrybox',
+    templateUrl: './retrybox.component.html',
+    styleUrl: './retrybox.component.scss',
+    imports: [
+        CommonModule,
+        FontAwesomeModule,
+        MatButtonModule
+    ]
 })
 export class RetryBoxComponent implements AfterViewInit {
 

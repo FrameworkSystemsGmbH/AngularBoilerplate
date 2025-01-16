@@ -7,15 +7,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  standalone: true,
-  selector: 'my-errorbox',
-  templateUrl: './errorbox.component.html',
-  styleUrl: './errorbox.component.scss',
-  imports: [
-    CommonModule,
-    FontAwesomeModule,
-    MatButtonModule
-  ]
+    selector: 'my-errorbox',
+    templateUrl: './errorbox.component.html',
+    styleUrl: './errorbox.component.scss',
+    imports: [
+        CommonModule,
+        FontAwesomeModule,
+        MatButtonModule
+    ]
 })
 export class ErrorBoxComponent {
 

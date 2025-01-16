@@ -10,15 +10,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition, faExclamationCircle, faExclamationTriangle, faInfoCircle, faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  standalone: true,
-  selector: 'my-msgbox',
-  templateUrl: './msgbox.component.html',
-  styleUrl: './msgbox.component.scss',
-  imports: [
-    CommonModule,
-    FontAwesomeModule,
-    MatButtonModule
-  ]
+    selector: 'my-msgbox',
+    templateUrl: './msgbox.component.html',
+    styleUrl: './msgbox.component.scss',
+    imports: [
+        CommonModule,
+        FontAwesomeModule,
+        MatButtonModule
+    ]
 })
 export class MsgBoxComponent implements AfterViewInit {
 
